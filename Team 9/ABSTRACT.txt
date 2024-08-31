@@ -1,5 +1,7 @@
 URK22CS7023 AREN D'SOUZA
 
+Programming software used for this project is VS Code
+
 # Object Detection with Distance Measurement Using Machine Learning Algorithms
 
 ## Abstract
