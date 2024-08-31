@@ -1,0 +1,10 @@
+# Object Detection with Distance Measurement Using Machine Learning Algorithms
+
+## Abstract
+
+Object detection and distance measurement are critical components in various applications ranging from robotics to autonomous driving. This project focuses on developing a system that accurately detects objects and measures their distance from the camera in real-time using machine learning algorithms. The system utilizes the YOLO (You Only Look Once) object detection model to identify and classify objects within a video feed. Additionally, it computes the distance to specific objects based on their apparent size in the image and known physical dimensions.
+
+The proposed solution leverages a pre-trained YOLO model for object detection, ensuring high accuracy and efficiency in recognizing multiple object classes simultaneously. The distance measurement is calculated using the principles of perspective geometry, where the size of the detected object in the image is compared to its actual size to estimate the distance.
+
+This project demonstrates the integration of object detection with distance measurement, providing a robust and scalable solution for applications in surveillance, navigation, and automation. The system is implemented using Python, OpenCV, and the YOLO model, offering a real-time, adaptable, and efficient approach to solving object detection and distance estimation challenges.
+
