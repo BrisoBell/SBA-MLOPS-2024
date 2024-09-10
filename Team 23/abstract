@@ -1,0 +1,5 @@
+Autism Spectrum Disorder (ASD) is a neurodevelopmental condition characterized by social, communication, and behavioral challenges. Early detection of ASD is crucial for timely intervention and improved outcomes. This project proposes a machine learning-based approach to predict ASD using the Autism Quotient (AQ-10) test.
+
+The AQ-10 is a self-report questionnaire that assesses autistic traits in adults. By analyzing the responses to the AQ-10 questions, machine learning algorithms can identify patterns associated with ASD. This study explores the effectiveness of various machine learning models, including Random Forest, Support Vector Machine (SVM), and Logistic Regression, in accurately predicting ASD based on AQ-10 data.
+
+The project involved data preprocessing, feature engineering, model training, and evaluation. The performance of the models was assessed using metrics such as accuracy, precision, recall, and F1-score. The findings of this research demonstrate the potential of machine learning to aid in the early detection of ASD, providing a valuable tool for healthcare professionals.
