@@ -1,6 +1,6 @@
 Topic: Harmful Object Detection
 Team: J Jenolin Jeba (URK22CS5026)
 
-We propose an approach to detect harmful objects using machine learning (ML),specifically targeting items such as knives, guns, wine bottles, cigarettes,
+The proposed approach is to detect harmful objects using machine learning (ML),specifically targeting items such as knives, guns, wine bottles, cigarettes,
 and other objects often associated with security threats or restricted use in certain environments. The proposed solution leverages unsupervised learning
 techniques to develop a robust and efficient detection model capable of identifying harmful objects from various image inputs.
