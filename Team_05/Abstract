@@ -1,1 +1,17 @@
+TITLE: FAKE NEWS DETECTION
 
+PROJECT OVERVIEW:
+  - Fake news spreads quickly online, making it hard to tell what’s real or not. 
+  - This project uses machine learning to train models on real and fake news articles, helping manually check if a new article is true or false. 
+  - This helps fight misinformation and makes online news more trustworthy.
+  
+DATASET:
+  - True News Articles Dataset: Collection of verified, factual news articles.
+  - Fabricated News Articles Dataset: Collection of known fake news articles created with the intention of spreading misinformation.
+
+ALGORITHM's USED: 
+We applied four machine learning techniques to evaluate the model's performance.
+  - Logistic Regression : Transforms the output of the model to a probability between 0 and 1.
+  - Decision Tree Classifier : Predicts outcomes by splitting data into a tree structure based on input features.
+  - Gradient Boost Classifier : Helps prevent numerical instability or overfitting.
+  - Random Forest Classifier : Random forest classifiers are accurate and can handle large and complex datasets.
