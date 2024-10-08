@@ -38,6 +38,7 @@ The project involves integrating advanced AI algorithms with open-source WebGIS 
   - **Kubernetes (Optional):** For orchestration of containerized applications.  
   - **Jupyter Notebook:** For exploratory data analysis and visualization.(mostly .ipynb is used)
 - **Platform:** Fedora OS with NVIDIA RTX 3060 GPU for model training and inference.
+- ****          NVIDIA A100 GPU Core
 
 ---
 
