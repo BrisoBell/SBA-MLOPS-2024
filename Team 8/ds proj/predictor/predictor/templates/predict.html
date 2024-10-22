@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Page</title>
+    {% load static %}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url(" {% static 'C:/Users/shine rijo/Documents/ds proj/predictor/static/pexels-engin-akyurt-1435752.jpg'%} ");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        form {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .form-group input {
+            width: calc(100% - 20px);
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: dodgerblue;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: dodgerblue;
+            color: white;
+            cursor: pointer;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="center" >
+        <h1>Please Enter The Following Information:</h1>
+        <!-- The form now calls validateForm before submitting -->
+        <form action="result" onsubmit="return validateForm()">
+            <table>
+                <tr>
+                    <th colspan="2">Diabetes Tester</th>
+                </tr>
+                <tr>
+                    <td>Pregnancies:</td>
+                    <td><input type="text" name="n1" id="n1" placeholder="Enter number of pregnancies" min="0" max="20" required></td>
+                </tr>
+                <tr>
+                    <td>Glucose:</td>
+                    <td><input type="text" name="n2" id="glucose" placeholder="Enter glucose level" min="0" max="300" required></td>
+                </tr>
+                <tr>
+                    <td>Blood Pressure:</td>
+                    <td><input type="text" name="n3" id="BloodPressure" placeholder="Enter Blood Pressure" min="0" max="200" required></td>
+                </tr>
+                <tr>
+                    <td>Skin Thickness:</td>
+                    <td><input type="text" name="n4" id="SkinThickness" placeholder="Enter Skin Thickness" min="0" max="100" required></td>
+                </tr>
+                <tr>
+                    <td>Insulin:</td>
+                    <td><input type="text" name="n5" id="Insulin" placeholder="Enter Insulin" min="0" max="900" required></td>
+                </tr>
+                <tr>
+                    <td>BMI:</td>
+                    <td><input type="text" name="n6" id="BMI" placeholder="Enter BMI" step="0.1" min="0" max="70" required></td>
+                </tr>
+                <tr>
+                    <td>Diabetes Pedigree Function:</td>
+                    <td><input type="text" name="n7" id="DiabetesPedigreeFunction" placeholder="Enter Diabetes Pedigree Function" step="0.01" min="0" max="2.5" required></td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><input type="text" name="n8" id="Age" placeholder="Enter Age" min="1" max="120" required></td>
+                </tr>
+            </table>
+            <input type="submit">
+        </form>
+        <div>Result: {{ result2 }}</div>
+    </div>
+
+    <script>
+        function validateForm() {
+            const fields = [
+                { id: 'n1', min: 0, max: 20, name: 'Pregnancies' },
+                { id: 'glucose', min: 0, max: 300, name: 'Glucose' },
+                { id: 'BloodPressure', min: 0, max: 200, name: 'Blood Pressure' },
+                { id: 'SkinThickness', min: 0, max: 100, name: 'Skin Thickness' },
+                { id: 'Insulin', min: 0, max: 900, name: 'Insulin' },
+                { id: 'BMI', min: 0, max: 70, name: 'BMI' },
+                { id: 'DiabetesPedigreeFunction', min: 0, max: 2.5, name: 'Diabetes Pedigree Function' },
+                { id: 'Age', min: 1, max: 120, name: 'Age' }
+            ];
+            
+            for (let field of fields) {
+                const inputElement = document.getElementById(field.id);
+                const value = parseFloat(inputElement.value);
+                if (isNaN(value) || value < field.min || value > field.max) {
+                    alert(`${field.name} must be a number between ${field.min} and ${field.max}`);
+                    inputElement.focus();  
+                    return false; 
+                }
+            }
+            return true;
+        }
+    </script>
+    
+</body>
+</html>

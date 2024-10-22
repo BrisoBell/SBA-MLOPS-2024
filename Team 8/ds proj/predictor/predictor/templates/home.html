@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+
+    <style>
+        .center {
+            text-align: center;
+        }
+        div {
+            color: black;
+        }
+        h1 {
+            color: #000000;  /* Remove quotes around hex code */
+            font-family: arial, sans-serif;
+            font-size: 60px;
+            font-weight: bold;
+            margin-top: 200px;
+        }
+        h2 {
+            color: #000000;  /* Remove quotes around hex code */
+            font-family: arial, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 400px;
+        }
+        body {
+            background-image: url("{% static 'images/pexels-nataliya-vaitkevich-6941884.jpg' %}");  /* Correct usage of static URL */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        input[type=submit] {
+            background-color: #4dc3ff;
+            border: 2px;
+            color: white;
+            padding: 16px 32px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1>
+            MEDVIZ-DIABETES PREDICTOR
+        </h1>
+        
+
+        <form action="predict">
+            <input type='submit' value='Predictor'>
+        </form>
+    </div>
+</body>
+</html>
