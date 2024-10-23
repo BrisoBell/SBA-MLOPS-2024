@@ -33,8 +33,8 @@ pip install -r requirements.txt
 3. Initialize DVC
 dvc init
 
-# Set up MLflow tracking via DagsHub
-export MLFLOW_TRACKING_URI=https://dagshub.com/Adithya/chest-Disease-Classification-MLflow-DVC.mlflow
+4. Set up MLflow tracking via DagsHub
+export MLFLOW_TRACKING_URI="https://dagshub.com/Adithya/chest-Disease-Classification-MLflow-DVC.mlflow"
 export MLFLOW_TRACKING_USERNAME="Adithya_B_V"
 export MLFLOW_TRACKING_PASSWORD="password"
 
